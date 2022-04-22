@@ -1,38 +1,271 @@
-.App {
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+.App{
+  height: 100vh;
+  width: 100vw;
+  background:url('https://wallpaperaccess.com/full/1267580.jpg');
+}
+
+.nav-bar{
+  color:#fff;
+  position: absolute;
+  top:0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position:relative;
+  width: 100vw;
+}
+.nav-heading{
+  margin: 0 0 0 100px;
+  height:100%;
+  display:flex;
+  align-items:center ;
+  cursor: pointer;
+}
+
+
+
+.nav-list-div{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  left:35%;
+}
+.nav-list{
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.nav-list-item{
+  margin: 0 20px 0 20px;
+  cursor: pointer;
+}
+.nav-list-item:hover{
+  color:aliceblue;
+  text-decoration: underline;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3)
+}
+.hamburger-btn{
+  display: none;
+  outline: none;
+  position: absolute;
+  font-size: 22px;
+  top:26px;
+  right: 20px;
   text-align: center;
+  padding: 5px;
+  border: none;
+  background: none;
+  color: #fff;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hamburger-btn:hover{
+  color:aliceblue;
+  text-shadow: 2px 2px 5px rgba(255,255,255,1)
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main{
+  display: flex;
+  width: 100vw;
+  height:calc(100vh - 80px);
+  
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-left{
+  padding: 0 0 0 40px;
+}
+.main-left,.main-right{
+  color: aliceblue;
+  width: 10%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
+.details-icon{
+  margin-top: 10px;
+  font-size: 30px;
+}
+.indicator{
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.indicator button{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin: 20px 0 0 0;
+  border: none;
+  outline:none;
 
-.App-link {
-  color: #61dafb;
 }
+.indicator button:hover{
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+.details{
+  position:absolute;
+  top:20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
+.social-media{
+  display: flex;
+  flex-direction: column;
+}
+.social-media-icon{
+  margin: 20px 0 20px 0;
+  font-size: 40px;
+}
+.vertical-line{
+  height: 200px;
+  width: 2px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.main-mid{
+  color:#fff;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-list-div-mobile{
+  width:100vw;
+  height:100px;
+  position: absolute;
+  top:80px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  background-color: aliceblue;
+  color: #000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.nav-list-mobile{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  color: #000;
+
+}
+.main-mid-text{
+  padding: 30px;
+  width: 70%;
+}
+.main-mid-btn{
+  margin:50px;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  border-top-right-radius: 25%;
+  font-size: 15px;
+  padding: 20px;
+  font-weight: bolder;
+  background:none;
+  outline: none;
+  border: #fff 1px solid;
+  color: #fff;
+}
+.main-mid-btn:hover{
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+}
+.indicator .active{
+  height: 20px;
+  border-radius: 5px;
+}
+.main-mid-text h1{
+  font-size:45px;
+}
+@media only screen and (max-width: 620px) {
+  body {
+    background-color: lightblue;
+  }
+  .nav-list-div{
+    display:none;
+  }
+  .nav-heading{
+    margin: 0 0 0 20px;
+  }
+  .hamburger-btn{
+    display: block;
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height:calc(100vh - 80px);
+  }
+  .main-left{
+    width: 100vw;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  .main-right{
+    width: 100vw;
+    max-height: 20%;
+  }
+  .vertical-line{
+    margin-top: 20px;
+    width: 80%;
+    height: 2px;
+  }
+  .indicator,.social-media{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+  }
+  .indicator button {
+    margin: 0 20px 0 20px;
+  }
+  .social-media-icon{
+    margin: 0 10px 0 10px;
+  }
+  .details{
+    display: none;
+  }
+  
+  .main-mid{
+    width: 100vw;
+  }
+  .main-mid-text{
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-mid-text h1{
+    font-size:25px;
+  }
+  .main-mid-text p{
+    font-size:10px;
+  }
+
+  .indicator .active{
+    width: 20px;
+    height:5px;
+    border-radius: 5px;
+  }
+
+
+}
+  
